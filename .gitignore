@@ -102,7 +102,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+education/.env
 .venv
 env/
 venv/
@@ -253,7 +253,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+education/.env
 .venv
 env/
 venv/

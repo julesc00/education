@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "courses/base.html" %}
 {% block title %}Log-in{% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
         <p>Please, use the following form to log-in:</p>
     {% endif %}
         <div class="login-form">
-            <form action="{% url 'login' %}">
+            <form action="{% url 'login' %}" method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <input type="hidden" name="next" value="{{ next }}">

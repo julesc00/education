@@ -92,6 +92,10 @@ class File(ItemBase):
     file = models.FileField(upload_to="files")
 
 
+class Image(ItemBase):
+    file = models.FileField(upload_to="images")
+
+
 class Video(ItemBase):
     """Video object to store urls to video files."""
     url = models.URLField()

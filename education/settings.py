@@ -53,12 +53,31 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+
+    # Per-site caching example
+    # "django.middleware.cache.UpdateCacheMiddleware",
+    # "django.middleware.cache.FetchFromCacheMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+"""
+You have done this to test the per-site cache functionality. However, the per-site
+cache is not suitable for you, since the course management views need to show
+updated data to instantly reflect any changes. The best approach to follow in your
+project is to cache the templates or views that are used to display course contents to
+students.
+
+You have seen an overview of the methods provided by Django to cache data.
+You should define your cache strategy wisely and prioritize the most expensive
+QuerySets or calculations.
+"""
+# CACHE_MIDDLEWARE_ALIAS = "default"
+# CACHE_MIDDLEWARE_SECONDS = 60 * 15  # 15 minutes
+# CACHE_MIDDLEWARE_KEY_PREFIX = "education"
 
 ROOT_URLCONF = 'education.urls'
 

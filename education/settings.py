@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # Third party apps
     "embed_video",
+    "memcache_status",
 
     # My apps
     "courses.apps.CoursesConfig",
@@ -136,3 +137,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = reverse_lazy("students:student_course_list")
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.memcached.MemcachedCache",
+        "LOCATION": "127.0.0.1:11211",
+    }
+}

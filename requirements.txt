@@ -5,6 +5,7 @@ charset-normalizer==2.0.10
 Django==4.0.1
 django-braces==1.15.0
 django-embed-video==1.4.1
+django-memcache-status==2.2
 idna==3.3
 iniconfig==1.1.1
 packaging==21.3
@@ -14,7 +15,9 @@ py==1.11.0
 pyparsing==3.0.7
 pytest==6.2.5
 pytest-django==4.5.2
+python-memcached==1.59
 requests==2.27.1
+six==1.16.0
 sqlparse==0.4.2
 toml==0.10.2
 urllib3==1.26.8

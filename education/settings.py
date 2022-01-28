@@ -42,13 +42,21 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third party apps
+    "rest_framework",
     "embed_video",
     "memcache_status",
 
     # My apps
     "courses.apps.CoursesConfig",
     "students.apps.StudentsConfig",
+    "api.apps.ApiConfig",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

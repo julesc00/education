@@ -45,11 +45,13 @@ INSTALLED_APPS = [
     "rest_framework",
     "embed_video",
     "memcache_status",
+    "channels",
 
     # My apps
     "courses.apps.CoursesConfig",
     "students.apps.StudentsConfig",
     "api.apps.ApiConfig",
+    "chat.apps.ChatConfig",
 ]
 
 REST_FRAMEWORK = {
@@ -171,3 +173,5 @@ CACHES = {
         "LOCATION": "127.0.0.1:11211",
     }
 }
+
+ASGI_APPLICATION = "education.routing.application"
